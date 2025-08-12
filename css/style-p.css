@@ -436,6 +436,30 @@ a {
         animation: none;
     }
 
+    .zones .zone {
+        display: block;
+        grid-template-columns: 1fr;
+        grid-template-areas: 'img' 'txt';
+        padding: 0.25;
+    }
+
+    .zones .zone.left {
+        grid-template-areas: 'img' 'txt';
+    }
+
+    .zones .zone img {
+        width: 100%;
+    }
+
+    .zones .zone .zone-text h3 {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    .zones .zone .zone-text p {
+        font-size: 1rem;
+    }
+
 }
 
 .slider{
