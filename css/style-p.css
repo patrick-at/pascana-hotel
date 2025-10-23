@@ -105,7 +105,7 @@ a {
 /* Hero Section */
 .hero {
     background-color: #cccccc;
-    background-image: url('../img/hero-placeholder.jpeg');
+    background-image: url('../img/hero.jpg');
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -130,12 +130,16 @@ a {
 
 /* Sections */
 .section {
-    padding: 60px 2rem;
+    padding-block: 2rem;
     text-align: center;
 }
 
+.section > * {
+    padding-inline: 2rem;
+}
+
 .section h2 {
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
     font-size: 3rem;
     font-weight: bold;
 }
@@ -270,23 +274,29 @@ a {
 .zones {
     display: flex;
     flex-direction: column;
+    gap: 2rem;
     align-items: center;
 }
 
 .zones .zone {
     display: grid;
+    align-items: center;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 'txt img';
     padding: 1rem 2rem;
+    background-color: black;
+    color: white;
 }
 
 .zones .zone.left {
     grid-template-areas: 'img txt';
+    background-color: white;
+    color: black;
 }
 
 .zones .zone .zone-text {
     grid-area: txt;
-    display: flex;
+    display: grid;
     gap: 1rem;
     flex-direction: column;
     align-items: center;
@@ -298,13 +308,26 @@ a {
 }
 
 
-.zones .zone .zone-text h3 {
+.zones .zone .zone-text .zone-text-title h3 {
     font-size: 2.5rem;
     font-weight: bold;
 }
 
-.zones .zone .zone-text p {
+.zones .zone .zone-text .zone-text-desc p {
     font-size: 1.25rem;
+}
+
+.zones .zone .zone-text .zone-text-imgs {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.zones .zone .zone-text .zone-text-imgs .zone-text-img {
+    padding: 1rem;
+}
+
+.zones .zone .zone-text .zone-text-imgs .zone-text-img img {
+    width: 100%
 }
 
 .zones .zone img {
